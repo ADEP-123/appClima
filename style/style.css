@@ -66,10 +66,6 @@ body{
     text-align: center;
 }
 
-.mainPanel img{
-    width: 40%;
-}
-
 .mainPanel div{
     display: flex;
     align-items: center;
@@ -77,6 +73,41 @@ body{
     justify-content: center;
     width: 80%;
 }
+
+.countryInfo{
+    max-height: 20%;
+}
+
+.logoAndTerm{
+    height: 20%;
+    position: relative;
+    overflow: hidden;
+}
+.logoAndTerm:hover{
+    cursor: pointer;
+}
+#termanSen{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute; 
+    top: 0;
+    left: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    width: 100%;
+    text-align: center;
+    transition: left 0.5s ease;
+}
+
+
+.logoAndTerm img, .logoAndTerm div{
+    height: 100%;
+}
+
 .countryInfo h2,
 .countryInfo img,
 .weathinfo p{
@@ -84,10 +115,9 @@ body{
     margin-right: 5%;
 }
 
-/* #countryFlag{
-    width: 30%;
-    height: 50%;
-} */
+#countryFlag{
+    height: 40%;
+} 
 
 .mainPanel p{
     font-size: 1.2rem;
@@ -101,7 +131,7 @@ body{
     color: var(--black);
 }
 .mainPanel button{
-    margin-top: 8%;
+    margin-top: 1%;
 }
 
 .mainPanel button:hover{

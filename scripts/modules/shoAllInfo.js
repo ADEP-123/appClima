@@ -1,5 +1,6 @@
 import Variables from "../variables.js";
 import getInfo from "./getInfo.js";
+import setTermSenInfo from "./setTermSenInfo.js";
 import showAnimImg from "./showAnimImg.js";
 import showWeatherInfo from "./showWeatherInfo.js";
 
@@ -14,5 +15,6 @@ const showAllInfo = async (setType) => {
     await getInfo(variables.APIurl)
     showWeatherInfo(variables.weatherInfo)
     showAnimImg(variables.weatherInfo, variables.logoHTMLEl)
+    setTermSenInfo(variables.weatherInfo);
 }
 export default showAllInfo
