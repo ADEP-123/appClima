@@ -1,12 +1,32 @@
+import changeTextWidth from "./modules/changeTextWidth.js";
 import getCountriesorCities from "./modules/getCountries.js";
 import getInfo from "./modules/getInfo.js";
 import Variables from "./variables.js";
 
-const variables = new Variables;
 
-// variables.setURL("bogota", "CO")
+
+document.addEventListener("DOMContentLoaded", async (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    const variables = new Variables;
+
+    variables.countrSelect.addEventListener('change', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        changeTextWidth(variables.countrSelect);
+    });
+    // Obtener todos los paises del mundo para el select
+    await getCountriesorCities(variables.paisesURL, "country")
+    changeTextWidth(variables.countrSelect)
+    displayCountry()
+
+
+
+})
+
+// variables.setURL("bogota", "CO");
 // getInfo(variables.APIurl)
-// getCountriesorCities(variables.paisesURL,"country")
+
 // variables.setCiudadesUrl("co");
-// getCountriesorCities(variables.ciudadesURL,"cities")
+// getCountriesorCities(variables.ciudadesURL, "cities")
 
