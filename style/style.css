@@ -67,7 +67,7 @@ body{
 }
 
 .mainPanel img{
-    width: 50%;
+    width: 40%;
 }
 
 .mainPanel div{
@@ -84,10 +84,10 @@ body{
     margin-right: 5%;
 }
 
-#countryFlag{
+/* #countryFlag{
     width: 30%;
     height: 50%;
-}
+} */
 
 .mainPanel p{
     font-size: 1.2rem;
