@@ -1,6 +1,7 @@
 import Variables from "../variables.js";
+import insCountries from "./insCountries.js";
 
-const getCountriesorCities = (url, type) => {
+const getCountriesorCities = async (url, type) => {
     const options = {
         method: 'GET',
         headers: {
@@ -8,23 +9,30 @@ const getCountriesorCities = (url, type) => {
             'X-RapidAPI-Host': 'referential.p.rapidapi.com'
         }
     };
-    fetch(url, options).then(data => {
-        return data.json();
-    }).then(dataJSON => {
-        const variables = new Variables;
-        console.log(dataJSON);
-        if (type == "country") {
-            dataJSON.forEach(element => {
-                variables.setNewPais(element.altSpellings[0], element.name.common, element.flags.png)
-            });
-            // console.log(variables.paises);
-        } else if (type == "cities") {
+    try {
+        await fetch(url, options).then(data => {
+            return data.json();
+        }).then(dataJSON => {
+            const variables = new Variables;
+            // console.log(dataJSON);
+            if (type == "country") {
+                dataJSON.forEach(element => {
+                    variables.setNewPais(element.altSpellings[0], element.name.common, element.flags.png)
+                });
+                insCountries(variables.paises)
+            } else if (type == "cities") {
+                if (variables.ciudades.length != 0) {
+                    variables.clearCities()
+                }
+                dataJSON.forEach(element => {
+                    variables.setNewCiudad(element)
+                });
+                // console.log(variables.ciudades);
+            }
+        });
+    } catch (error) {
+        console.error({ error });
+    }
 
-            dataJSON.data.forEach(element => {
-                variables.setNewCiudad(element)
-            });
-            console.log(variables.ciudades);
-        }
-    })
 }
 export default getCountriesorCities

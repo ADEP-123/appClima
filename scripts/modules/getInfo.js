@@ -1,11 +1,15 @@
-const getInfo = (url) => {
-    fetch(url).then(data => {
+import Variables from "../variables.js";
+
+const getInfo = async (url) => {
+    const variables = new Variables
+    await fetch(url).then(data => {
         return data.json();
     }).then(dataJSON => {
-        if(dataJSON.cod === "404"){
+        // console.log(dataJSON);
+        if (dataJSON.cod === "404") {
             console.error("Ciudad no encontrada")
-        }else{
-            console.log(dataJSON);
+        } else {
+            variables.setWeatherInfo(dataJSON);
         }
     })
 }

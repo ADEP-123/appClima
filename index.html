@@ -5,29 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/style.css">
-    <title>Document</title>
+    <title>Climate APP</title>
 </head>
 
 <body>
     <div class="mainPanel">
         <h1 id="appTittle">APLICACION DEL CLIMA</h1>
-        <h2 id="ubicacion">Ubicacion</h2>
+        <div class="countryInfo">
+            <h2 id="ubicacion">Ubicacion</h2>
+            <img src="" id="countryFlag">
+        </div>
         <img id="logo" src="images/loadingBot.gif">
-        <p id="temp">-ºC</p>
-        <p id="hum">Humedad: -</p>
+        <div class="weathinfo">
+            <p id="temp">-ºC</p>
+            <p id="hum">Humedad: -</p>
+        </div>
+
         <div class="SelcZone">
-            <div id="cointries">
+            <div id="countries">
                 <p>Paises:</p>
-                <select id="contries">
-                    <option value="1">ej1</option>
-                    <option value="2">ej2</option>
+                <select id="countrSelect">
                 </select>
             </div>
             <div id="cities">
                 <p>Ciudades:</p>
-                <select id="cities">
-                    <option value="1">ej1</option>
-                    <option value="2">ej2</option>
+                <select id="citSelect">
                 </select>
             </div>
         </div>
@@ -36,5 +38,6 @@
 
     <script src="scripts/index.js" type="module"></script>
 </body>
+<option value=""></option>
 
 </html>
