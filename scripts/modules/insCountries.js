@@ -1,6 +1,7 @@
 import Variables from "../variables.js"
 
 const insCountries = (countries) => {
+
     const variables = new Variables
     const selection = variables.countrSelect;
 
@@ -10,6 +11,5 @@ const insCountries = (countries) => {
         option.innerHTML = `${element.nombre}`
         selection.appendChild(option)
     });
-    // console.log(selection);
 }
 export default insCountries

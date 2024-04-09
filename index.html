@@ -11,10 +11,16 @@
 <body>
     <div class="mainPanel">
         <h1 id="appTittle">APLICACION DEL CLIMA</h1>
-        <h2 id="ubicacion">Ubicacion</h2>
+        <div class="countryInfo">
+            <h2 id="ubicacion">Ubicacion</h2>
+            <img src="" id="countryFlag">
+        </div>
         <img id="logo" src="images/loadingBot.gif">
-        <p id="temp">-ºC</p>
-        <p id="hum">Humedad: -</p>
+        <div class="weathinfo">
+            <p id="temp">-ºC</p>
+            <p id="hum">Humedad: -</p>
+        </div>
+
         <div class="SelcZone">
             <div id="countries">
                 <p>Paises:</p>
@@ -23,7 +29,6 @@
             </div>
             <div id="cities">
                 <p>Ciudades:</p>
-                <img src="" id="countryFlag">
                 <select id="citSelect">
                     <option value="1">ej1</option>
                     <option value="2">ej2</option>
@@ -36,4 +41,5 @@
     <script src="scripts/index.js" type="module"></script>
 </body>
 <option value=""></option>
+
 </html>

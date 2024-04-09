@@ -15,6 +15,7 @@ class Variables {
             this.countrSelect = document.querySelector("#countrSelect");
             this.citSelect = document.querySelector("#citSelect");
             this.myUbButton = document.querySelector("#myUb");
+            this.ctryFlagImg = document.querySelector("#countryFlag");
             Variables.instance = this;
         }
         return Variables.instance
