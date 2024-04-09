@@ -21,7 +21,10 @@ const getCountriesorCities = async (url, type) => {
                 });
                 insCountries(variables.paises)
             } else if (type == "cities") {
-                dataJSON.data.forEach(element => {
+                if (variables.ciudades.length != 0) {
+                    variables.clearCities()
+                }
+                dataJSON.forEach(element => {
                     variables.setNewCiudad(element)
                 });
                 // console.log(variables.ciudades);

@@ -37,6 +37,9 @@ class Variables {
     setNewCiudad(newCity) {
         this.ciudades.push(newCity)
     }
+    clearCities() {
+        this.ciudades = [];
+    }
 
 }
 export default Variables;
