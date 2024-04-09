@@ -8,6 +8,13 @@ class Variables {
             this.ciudadesURL = '';
             this.paises = [];
             this.ciudades = [];
+            this.ubicHTMLEl = document.querySelector("#ubicacion");
+            this.logoHTMLEl = document.querySelector("#logo");
+            this.tempHTMLEl = document.querySelector("#temp");
+            this.humHTLEl = document.querySelector("#hum");
+            this.countrSelect = document.querySelector("#countrSelect");
+            this.citSelect = document.querySelector("#citSelect");
+            this.myUbButton = document.querySelector("#myUb");
             Variables.instance = this;
         }
         return Variables.instance
