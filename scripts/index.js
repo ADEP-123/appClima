@@ -3,6 +3,7 @@ import displayCountry from "./modules/displayCountry.js";
 import getCountriesorCities from "./modules/getCountries.js";
 import getInfo from "./modules/getInfo.js";
 import insCities from "./modules/instCities.js";
+import showWeatherInfo from "./modules/showWeatherInfo.js";
 import Variables from "./variables.js";
 
 
@@ -25,11 +26,13 @@ document.addEventListener("DOMContentLoaded", async (e) => {
     changeTextWidth(variables.countrSelect);
     displayCountry();
 
-    variables.citSelect.addEventListener('change', (e) => {
+    variables.citSelect.addEventListener('change', async (e) => {
         e.preventDefault();
         e.stopPropagation();
         changeTextWidth(variables.citSelect);
-        getInfo(variables.APIurl)
+        variables.setURL(variables.citSelect.value, variables.countrSelect.value);
+        await getInfo(variables.APIurl)
+        showWeatherInfo(variables.weatherInfo)
     });
 
     //obtener las ciudades del pais seleccionado y mostrarlas
@@ -38,14 +41,9 @@ document.addEventListener("DOMContentLoaded", async (e) => {
 
     //obtener la informacion del clima en la ciudad y mostrarla
     variables.setURL(variables.citSelect.value, variables.countrSelect.value);
-    getInfo(variables.APIurl)
-    showWeatherInfo()
+    await getInfo(variables.APIurl)
+    showWeatherInfo(variables.weatherInfo)
 
 })
 
-// variables.setURL("bogota", "CO");
-// getInfo(variables.APIurl)
-
-
-// getCountriesorCities(variables.ciudadesURL, "cities")
 

@@ -8,6 +8,7 @@ class Variables {
             this.ciudadesURL = '';
             this.paises = [];
             this.ciudades = [];
+            this.weatherInfo = {};
             this.ubicHTMLEl = document.querySelector("#ubicacion");
             this.logoHTMLEl = document.querySelector("#logo");
             this.tempHTMLEl = document.querySelector("#temp");
@@ -23,7 +24,7 @@ class Variables {
     }
 
     setURL(city, contry) {
-        this.APIurl = `https://api.openweathermap.org/data/2.5/weather?q=${city},${contry}&appid=${this.APIKey}`
+        this.APIurl = `https://api.openweathermap.org/data/2.5/weather?q=${city},${contry}&appid=${this.APIKey}&units=metric`
     }
     setIcon(idIcon) {
         this.iconUrl = `https://openweathermap.org/img/wn/${idIcon}@2x.png`
@@ -39,6 +40,9 @@ class Variables {
     }
     clearCities() {
         this.ciudades = [];
+    }
+    setWeatherInfo(newWeatherInfo) {
+        this.weatherInfo = newWeatherInfo
     }
 
 }
