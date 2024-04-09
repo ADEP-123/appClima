@@ -87,11 +87,20 @@ body{
     background-color: #5c616b;
 }
 
+.mainPanel select{
+    overflow-y: auto;
+    width: auto;
+    display: inline-block;
+}
+
 /* --Zona de seleccion-- */
 .mainPanel .SelcZone{
     display: flex;
     justify-content: space-between;
     width: 80%;
+}
+.SelcZone{
+    flex-direction: column;
 }
 
 .SelcZone div{
