@@ -3,8 +3,6 @@ import displayCountry from "./modules/displayCountry.js";
 import getCountriesorCities from "./modules/getCountries.js";
 import getMyUbCords from "./modules/getMyUbCords.js";
 import insCities from "./modules/instCities.js";
-import setCityUserSelect from "./modules/setCityUserSelect.js";
-import setCountrySelect from "./modules/setCountrySelect.js";
 import showAllInfo from "./modules/shoAllInfo.js";
 import Variables from "./variables.js";
 
@@ -13,6 +11,7 @@ import Variables from "./variables.js";
 document.addEventListener("DOMContentLoaded", async (e) => {
     e.preventDefault();
     e.stopPropagation();
+
     const variables = new Variables;
 
     variables.countrSelect.addEventListener('change', async (e) => {
@@ -42,6 +41,18 @@ document.addEventListener("DOMContentLoaded", async (e) => {
     //obtener la informacion del clima en la ciudad y mostrarla
     showAllInfo(1)
 
+    //Efecto para voltear tarjeta de el clima
+    variables.termSenHTMLEL.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation()
+        const termSen = variables.termSenHTMLEL.querySelector("#termanSen")
+        if (termSen.style.left === "100%" || termSen.style.left === "") {
+            termSen.style.left = "0%";
+        } else {
+            termSen.style.left = "100%";
+        }
+
+    });
 
     variables.myUbButton.addEventListener('click', (e) => {
         e.preventDefault();

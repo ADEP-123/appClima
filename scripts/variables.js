@@ -15,6 +15,7 @@ class Variables {
             this.logoHTMLEl = document.querySelector("#logo");
             this.tempHTMLEl = document.querySelector("#temp");
             this.humHTLEl = document.querySelector("#hum");
+            this.termSenHTMLEL = document.querySelector(".logoAndTerm")
             this.countrSelect = document.querySelector("#countrSelect");
             this.citSelect = document.querySelector("#citSelect");
             this.myUbButton = document.querySelector("#myUb");
