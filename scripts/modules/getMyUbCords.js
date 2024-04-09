@@ -1,4 +1,6 @@
 import Variables from "../variables.js";
+import setCityUserSelect from "./setCityUserSelect.js";
+import setCountrySelect from "./setCountrySelect.js";
 import showAllInfo from "./shoAllInfo.js";
 
 const getMyUbCords = () => {
@@ -6,12 +8,14 @@ const getMyUbCords = () => {
 
     if (navigator.geolocation) {
 
-        navigator.geolocation.getCurrentPosition(function (position) {
+        navigator.geolocation.getCurrentPosition(async function (position) {
             try {
                 const latitude = position.coords.latitude;
                 const longitude = position.coords.longitude;
                 variables.setUserLocation(latitude, longitude)
-                showAllInfo(2)
+                await showAllInfo(2)
+                setCountrySelect()
+                setCityUserSelect()
             } catch (error) {
                 switch (error.code) {
                     case error.PERMISSION_DENIED:

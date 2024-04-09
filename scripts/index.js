@@ -3,6 +3,8 @@ import displayCountry from "./modules/displayCountry.js";
 import getCountriesorCities from "./modules/getCountries.js";
 import getMyUbCords from "./modules/getMyUbCords.js";
 import insCities from "./modules/instCities.js";
+import setCityUserSelect from "./modules/setCityUserSelect.js";
+import setCountrySelect from "./modules/setCountrySelect.js";
 import showAllInfo from "./modules/shoAllInfo.js";
 import Variables from "./variables.js";
 
