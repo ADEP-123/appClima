@@ -3,6 +3,7 @@ import displayCountry from "./modules/displayCountry.js";
 import getCountriesorCities from "./modules/getCountries.js";
 import getInfo from "./modules/getInfo.js";
 import insCities from "./modules/instCities.js";
+import showAnimImg from "./modules/showAnimImg.js";
 import showWeatherInfo from "./modules/showWeatherInfo.js";
 import Variables from "./variables.js";
 
@@ -43,6 +44,7 @@ document.addEventListener("DOMContentLoaded", async (e) => {
     variables.setURL(variables.citSelect.value, variables.countrSelect.value);
     await getInfo(variables.APIurl)
     showWeatherInfo(variables.weatherInfo)
+    showAnimImg(variables.weatherInfo,variables.logoHTMLEl)
 
 })
 
