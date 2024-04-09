@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", async (e) => {
         await insCities();
         changeTextWidth(variables.citSelect);
     });
-    // Obtener todos los paises del mundo para el select
+    // Obtener todos los paises del mundo para el select y mostrarlos
     await getCountriesorCities(variables.paisesURL, "country");
     changeTextWidth(variables.countrSelect);
     displayCountry();
@@ -29,15 +29,17 @@ document.addEventListener("DOMContentLoaded", async (e) => {
         e.preventDefault();
         e.stopPropagation();
         changeTextWidth(variables.citSelect);
+        getInfo(variables.APIurl)
     });
 
-    //obtener las ciudades del pais seleccionado
+    //obtener las ciudades del pais seleccionado y mostrarlas
     await insCities();
     changeTextWidth(variables.citSelect);
 
-
-
-
+    //obtener la informacion del clima en la ciudad y mostrarla
+    variables.setURL(variables.citSelect.value, variables.countrSelect.value);
+    getInfo(variables.APIurl)
+    showWeatherInfo()
 
 })
 

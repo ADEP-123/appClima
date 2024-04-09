@@ -1,10 +1,10 @@
-const getInfo = (url) => {
-    fetch(url).then(data => {
+const getInfo = async (url) => {
+    await fetch(url).then(data => {
         return data.json();
     }).then(dataJSON => {
-        if(dataJSON.cod === "404"){
+        if (dataJSON.cod === "404") {
             console.error("Ciudad no encontrada")
-        }else{
+        } else {
             console.log(dataJSON);
         }
     })
