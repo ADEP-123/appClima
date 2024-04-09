@@ -72,6 +72,20 @@ body{
     font-size: 1.2rem;
     color: var(--blue1);
 }
+.mainPanel select, .mainPanel button{
+    border-radius: 15px;
+    text-decoration: none;
+    padding: 1.5%;
+    border: 1px solid var(--black);
+    color: var(--black);
+}
+
+.mainPanel button:hover{
+    cursor: pointer;
+    box-shadow: 1px 1px 10px var(--blue1);
+    color: var(--blue1);
+    background-color: #5c616b;
+}
 
 /* --Zona de seleccion-- */
 .mainPanel .SelcZone{
