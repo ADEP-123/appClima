@@ -1,12 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
     <title>Document</title>
 </head>
+
 <body>
-    
+    <div class="mainPanel">
+        <h1 id="appTittle">APLICACION DEL CLIMA</h1>
+        <h2 id="ubicacion">Ubicacion</h2>
+        <img id="logo" src="images/loadingBot.gif">
+        <p id="temp">-ºC</p>
+        <p id="hum">Humedad: -</p>
+        <div class="SelcZone">
+            <div id="cointries">
+                <p>Paises:</p>
+                <select id="contries">
+                    <option value="1">ej1</option>
+                    <option value="2">ej2</option>
+                </select>
+            </div>
+            <div id="cities">
+                <p>Ciudades:</p>
+                <select id="cities">
+                    <option value="1">ej1</option>
+                    <option value="2">ej2</option>
+                </select>
+            </div>
+        </div>
+        <button id="myUb">Mi ubicacion</button>
+    </div>
+
     <script src="scripts/index.js" type="module"></script>
 </body>
+
 </html>

@@ -6,7 +6,7 @@ const variables = new Variables;
 
 // variables.setURL("bogota", "CO")
 // getInfo(variables.APIurl)
-getCountriesorCities(variables.paisesURL,"country")
-variables.setCiudadesUrl("co");
-getCountriesorCities(variables.ciudadesURL,"cities")
+// getCountriesorCities(variables.paisesURL,"country")
+// variables.setCiudadesUrl("co");
+// getCountriesorCities(variables.ciudadesURL,"cities")
 

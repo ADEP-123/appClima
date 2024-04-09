@@ -1,0 +1,106 @@
+:root {
+    --white: #ffffff;
+    --gray:#5c616b;
+    --gray2:#757880;
+    --black:#1e2025;
+    --red:#bb0000;
+    --blue1:#daf6ff;
+    --blue2:#0aafe6;
+    --whiteRed:#f3b7b7;
+    --whiteYellow:#f5f5b4;
+    --whiteGreen:#c0f5c7;
+}
+*,*::after,*::before{
+    box-sizing: border-box;
+    font-family: 'IBM Plex Mono', monospace;
+}
+/* ---Body--- */
+body{
+    color: white;
+    background-color: var(--black);
+    width: 100vw;
+    height: 100vh;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* ---ScrollBar--- */
+::-webkit-scrollbar {
+    width: 12px; 
+}
+  
+::-webkit-scrollbar-track {
+  background: #212121; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ffffff; 
+    border-radius: 6px; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ffffff65; 
+    transition: 1s;
+}
+/* ---Main Panel--- */
+.mainPanel{
+    background-color: var(--gray2);
+    border: 2px solid var(--gray);
+    width: 30%;
+    height: 80%;
+    border-radius: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 2px 2px 20px var(--blue1);
+}
+.mainPanel h1{
+    text-align: left; 
+    font-weight: bold; 
+    font-size: 30px; 
+    text-shadow: 0 1px 0 #ddd, 0 2px 0 #ccc, 0 3px 0 #bbb, 0 4px 0 #aaa, 0 5px 0 #acacac, 0 6px 1px rgba(0,0,0,0.1), 0 0 5px rgba(0,0,0,0.1), 0 1px 3px rgba(0,0,0,0.3), 0 3px 5px rgba(0,0,0,0.2), 0 5px 10px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.2), 0 20px 20px rgba(0,0,0,0.15);
+    letter-spacing: 0.4rem;
+    margin-bottom: 7;
+}
+
+.mainPanel img{
+    width: 50%;
+}
+.mainPanel p{
+    font-size: 1.2rem;
+    color: var(--blue1);
+}
+.mainPanel select, .mainPanel button{
+    border-radius: 15px;
+    text-decoration: none;
+    padding: 1.5%;
+    border: 1px solid var(--black);
+    color: var(--black);
+}
+
+.mainPanel button:hover{
+    cursor: pointer;
+    box-shadow: 1px 1px 10px var(--blue1);
+    color: var(--blue1);
+    background-color: #5c616b;
+}
+
+/* --Zona de seleccion-- */
+.mainPanel .SelcZone{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}
+
+.SelcZone div{
+    display: flex;
+    margin: 5%;
+    align-items: center;
+    justify-content: center;
+}
+.SelcZone p{
+    font-size: 1.5rem;
+    color: var(--white);
+}
